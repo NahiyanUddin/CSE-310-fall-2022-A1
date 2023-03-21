@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Home page</title>
+    </head>
+
+    <body>
+        <h1>Hello World</h1>
+        {{ name }}
+        <br>
+        {{ ID }}
+        <br>
+        {{ courses }}
+        <br>
+
+        {% for c in courses %}
+            Course Title: {{ c }}
+            <br>
+        {% endfor %}
+        {{ mark }}
+        <br>
+        {{ mark2 }}
+        <br>
+        {% if mark >= 80 and mark <= 100 %}
+            A+
+            <br>
+        {% elif mark >= 75 %}
+            A
+            <br>
+        {% elif mark >= 70 %}
+            A-
+            <br>
+        {% elif mark >= 65 %}
+            B+
+            <br>
+        {% elif mark >= 60 %}
+            B
+            <br>
+        {% elif mark >= 55 %}
+            B-
+            <br>
+        {% elif mark >= 50 %}
+            C+
+            <br>
+        {% elif mark >= 45 %}
+            C
+            <br>
+        {% elif mark >= 40 %}
+            D
+            <br>
+        {% else %}
+            F
+            <br>
+        {% endif %}
+    </body>
+</html>
